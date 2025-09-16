@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>KodraX Studio — Laravel, Frontend & WordPress/Webflow Rescue</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Full-stack studio for robust Laravel APIs, fast frontends, and WordPress/Webflow rescue. Performance, reliability, and long-term maintenance.">
+  <link rel="icon" href="data:,">
+  <style>
+    :root{--bg:#0b0d12;--panel:#11151d;--card:#141a24;--ink:#eaf0f6;--muted:#9aa7b2;--line:#1e2532;--acc:#7dd3fc;--acc2:#34d399;--rad:16px;--pad:22px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}
+    body{margin:0;background:radial-gradient(1200px 600px at 20% -10%,rgba(52,211,153,.12),transparent 50%),radial-gradient(900px 600px at 100% 0,rgba(125,211,252,.12),transparent 55%),var(--bg);color:var(--ink);font:16px/1.6 ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1120px;margin:0 auto;padding:0 var(--pad)}
+    header{position:sticky;top:0;z-index:50;background:rgba(11,13,18,.6);backdrop-filter:saturate(180%) blur(10px);border-bottom:1px solid var(--line)}
+    .bar{display:flex;justify-content:space-between;align-items:center;height:64px}
+    .brand{font-weight:800;letter-spacing:.3px}
+    .tag{color:var(--muted);font-weight:600}
+    nav a{color:var(--muted);padding:8px 10px;border-radius:10px}
+    nav a:hover{background:#0e1320;color:var(--ink)}
+    .hero{padding:84px 0 56px}
+    .h1{font-size:48px;line-height:1.1;margin:0 0 10px}
+    .lead{color:var(--muted);max-width:780px}
+    .cta{display:flex;gap:12px;margin-top:18px;flex-wrap:wrap}
+    .btn{display:inline-block;padding:12px 18px;border-radius:12px;background:linear-gradient(135deg,var(--acc),var(--acc2));color:#091016;font-weight:800;box-shadow:0 4px 20px rgba(60,200,170,.25)}
+    .btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+    section{padding:64px 0;border-top:1px solid var(--line)}
+    h2{margin:0 0 6px;font-size:28px}
+    .muted{color:var(--muted)}
+    .grid{display:grid;gap:16px}
+    .cards{grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:var(--rad);padding:16px}
+    .card h3{margin:6px 0 4px}
+    .kpi{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-top:14px}
+    .kpi .box{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:12px;text-align:center}
+    .work{grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+    .work .item{border:1px solid var(--line);border-radius:18px;overflow:hidden;background:var(--panel)}
+    .thumb{display:block;aspect-ratio:16/9;background:#0d1320}
+    .thumb img{width:100%;height:100%;object-fit:cover;display:block}
+    .wrap{padding:14px}
+    .chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px}
+    .chip{border:1px solid var(--line);color:var(--muted);padding:2px 8px;border-radius:999px;font-size:12px}
+    form{display:grid;gap:10px;margin-top:12px}
+    input,textarea{width:100%;padding:12px;border-radius:12px;background:#0e131c;border:1px solid var(--line);color:var(--ink)}
+    .team{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+    .person{display:flex;gap:12px;align-items:flex-start;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:14px}
+    .avatar{width:54px;height:54px;border-radius:50%;background:#0d1320}
+    footer{padding:28px 0;color:var(--muted);text-align:center}
+    @media (min-width:960px){.h1{font-size:64px}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="container bar">
+    <div class="brand">KodraX <span class="tag">Studio</span></div>
+    <nav>
+      <a href="#work">Work</a>
+      <a href="#services">Services</a>
+      <a href="#team">Team</a>
+      <a href="#contact">Contact</a>
+      <a class="btn ghost" href="https://www.upwork.com/agencies/1965890569940564427/" target="_blank" rel="noopener">Upwork</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container hero">
+  <h1 class="h1">Laravel backends, fast frontends & WordPress/Webflow rescue.</h1>
+  <p class="lead">
+    We build reliable APIs, ship responsive UIs, and fix production issues fast. Available most of the day —
+    including weekends for urgent incidents. Performance, stability and long-term maintenance first.
+  </p>
+  <div class="cta">
+    <a class="btn" href="#contact">Request a quote</a>
+    <a class="btn ghost" href="https://petararsic.rs/en" target="_blank" rel="noopener">See portfolio</a>
+  </div>
+</main>
+
+<section id="services">
+  <div class="container">
+    <h2>Services</h2>
+    <p class="muted">End-to-end delivery for business applications — from database & APIs to UI and operations.</p>
+    <div class="grid cards" style="margin-top:12px">
+      <div class="card"><h3>Laravel APIs</h3><p class="muted">Clean architecture, queues, Redis caching, testing, auth, docs.</p></div>
+      <div class="card"><h3>Frontends (Vue/React)</h3><p class="muted">SSR/SPA, accessible UI, clear flows without bloat.</p></div>
+      <div class="card"><h3>WordPress/Webflow</h3><p class="muted">Bug-fix, migrations, theme/plugin work, speed & CWV, SEO-safe deploys.</p></div>
+      <div class="card"><h3>Performance</h3><p class="muted">Core Web Vitals 90+, TTFB &lt;100ms, image/CDN strategy, Nginx tuning.</p></div>
+      <div class="card"><h3>Maintenance & DevOps</h3><p class="muted">Monitoring, backups, blue-green deploys, security, on-call support.</p></div>
+    </div>
+
+    <div class="kpi">
+      <div class="box"><strong>5+ years</strong><div class="muted">Laravel & PHP</div></div>
+      <div class="box"><strong>2k+ hrs</strong><div class="muted">Upwork delivery (team)</div></div>
+      <div class="box"><strong>90+ CWV</strong><div class="muted">Consistent Lighthouse</div></div>
+      <div class="box"><strong>24/7</strong><div class="muted">Urgent incident response</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="container">
+    <h2>Selected work</h2>
+    <p class="muted">A few representative projects. More on our portfolio.</p>
+    <div class="grid work">
+      <article class="item">
+        <a class="thumb" href="https://bozic-konig.com/" target="_blank" rel="noopener">
+          <img loading="lazy" decoding="async" src="/img/bk.webp" alt="Online reservations">
+        </a>
+        <div class="wrap">
+          <strong>Online Reservations</strong>
+          <div class="muted">React/Next.js frontend + Laravel API for ticket booking.</div>
+          <div class="chips"><span class="chip">React</span><span class="chip">Next.js</span><span class="chip">Laravel</span></div>
+        </div>
+      </article>
+      <article class="item">
+        <a class="thumb" href="https://srbijatours.com/" target="_blank" rel="noopener">
+          <img loading="lazy" decoding="async" src="img/sti.webp" alt="Serbia Tours">
+        </a>
+        <div class="wrap">
+          <strong>Ticket Sales Frontend</strong>
+          <div class="muted">High-traffic frontend integrated with Laravel back-office.</div>
+          <div class="chips"><span class="chip">WordPress</span><span class="chip">Laravel</span><span class="chip">MySQL</span></div>
+        </div>
+      </article>
+      <article class="item">
+        <a class="thumb" href="https://demo.drivesoft.rs/" target="_blank" rel="noopener">
+          <img loading="lazy" decoding="async" src="img/demo.webp" alt="Demo reservations">
+        </a>
+        <div class="wrap">
+          <strong>Demo Reservations</strong>
+          <div class="muted">React demo for search & booking with clean flows.</div>
+          <div class="chips"><span class="chip">React</span><span class="chip">Tailwind</span><span class="chip">i18n</span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="team">
+  <div class="container">
+    <h2>Team</h2>
+    <p class="muted">Small, senior, responsive. We own the problem until it’s solved.</p>
+    <div class="grid team" style="margin-top:12px">
+      <div class="person">
+        <div class="avatar"></div>
+        <div>
+          <strong>Petar Arsić — Full-stack</strong>
+          <div class="muted">Laravel APIs, React/Vue frontends, booking platforms, long-term maintenance.</div>
+        </div>
+      </div>
+      <div class="person">
+        <div class="avatar"></div>
+        <div>
+          <strong>Nikola G. — WordPress/Webflow & Ops</strong>
+          <div class="muted">57+ completed Upwork jobs, 2k+ hours. Expert in bug fixing, speed, migrations, hosting & safe deployments.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <h2>WordPress/Webflow Rescue</h2>
+    <p class="muted">Site down, malware, slow TTFB, broken checkout, or migration needed? We jump in fast and fix without SEO damage.</p>
+    <div class="cta" style="margin-top:8px">
+      <a class="btn" href="#form">Start a rescue</a>
+      <a class="btn ghost" href="https://www.upwork.com/agencies/1965890569940564427/" target="_blank" rel="noopener">Hire us on Upwork</a>
+    </div>
+
+    <h2 id="form" style="margin-top:36px">Contact</h2>
+    <p class="muted">Tell us briefly what you need — we reply quickly (weekends for urgent issues).</p>
+    <!-- Replace YOUR_ID below (Formspree/Netlify/Basin). -->
+    <form action="https://formspree.io/f/YOUR_ID" method="POST">
+      <input name="name" placeholder="Your name" required>
+      <input name="email" type="email" placeholder="Email" required>
+      <textarea name="message" rows="4" placeholder="What do you need?" required></textarea>
+      <button class="btn" type="submit">Send</button>
+      <a class="btn ghost" style="margin-left:8px" href="mailto:hello@kodrax.studio">Email instead</a>
+    </form>
+  </div>
+</section>
+
+<footer>
+  © <span id="y"></span> KodraX Studio · Niš, RS · hello@kodrax.studio
+</footer>
+<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</body>
+</html>
