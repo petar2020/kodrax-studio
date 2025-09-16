@@ -1,102 +1,660 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   <title>KodraX Studio — Laravel, Frontend & WordPress/Webflow Rescue</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Full-stack studio for robust Laravel APIs, fast frontends, and WordPress/Webflow rescue. Performance, reliability, and long-term maintenance.">
+  <link rel="canonical" href="https://kodrax.vercel.app/">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#0b0d12">
+  <!-- OG/Twitter -->
+  <meta property="og:title" content="KodraX Studio — Laravel, Frontend & WordPress/Webflow Rescue">
+  <meta property="og:description" content="Reliable Laravel APIs, fast frontends, and WordPress/Webflow rescue without SEO damage.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kodrax.vercel.app/">
+  <meta property="og:image" content="https://kodrax.vercel.app/og-cover.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="KodraX Studio — Laravel, Frontend & WordPress/Webflow Rescue">
+  <meta name="twitter:description" content="Reliable Laravel APIs, fast frontends, and WordPress/Webflow rescue.">
+  <meta name="twitter:image" content="https://kodrax.vercel.app/og-cover.jpg">
+  <!-- JSON-LD -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"KodraX Studio","url":"https://kodrax.vercel.app/","email":"hello@kodrax.studio","address":{"@type":"PostalAddress","addressLocality":"Niš","addressCountry":"RS"},"sameAs":["https://www.upwork.com/agencies/1965890569940564427/"]}</script>
   <link rel="icon" href="data:,">
   <style>
-    :root{--bg:#0b0d12;--panel:#11151d;--card:#141a24;--ink:#eaf0f6;--muted:#9aa7b2;--line:#1e2532;--acc:#7dd3fc;--acc2:#34d399;--rad:16px;--pad:22px}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}
-    body{margin:0;background:radial-gradient(1200px 600px at 20% -10%,rgba(52,211,153,.12),transparent 50%),radial-gradient(900px 600px at 100% 0,rgba(125,211,252,.12),transparent 55%),var(--bg);color:var(--ink);font:16px/1.6 ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto}
-    a{color:inherit;text-decoration:none}
-    .container{max-width:1120px;margin:0 auto;padding:0 var(--pad)}
-    header{position:sticky;top:0;z-index:50;background:rgba(11,13,18,.6);backdrop-filter:saturate(180%) blur(10px);border-bottom:1px solid var(--line)}
-    .bar{display:flex;justify-content:space-between;align-items:center;height:64px}
-    .brand{font-weight:800;letter-spacing:.3px}
-    .tag{color:var(--muted);font-weight:600}
-    nav a{color:var(--muted);padding:8px 10px;border-radius:10px}
-    nav a:hover{background:#0e1320;color:var(--ink)}
-    .hero{padding:84px 0 56px}
-    .h1{font-size:48px;line-height:1.1;margin:0 0 10px}
-    .lead{color:var(--muted);max-width:780px}
-    .cta{display:flex;gap:12px;margin-top:18px;flex-wrap:wrap}
-    .btn{display:inline-block;padding:12px 18px;border-radius:12px;background:linear-gradient(135deg,var(--acc),var(--acc2));color:#091016;font-weight:800;box-shadow:0 4px 20px rgba(60,200,170,.25)}
-    .btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
-    section{padding:64px 0;border-top:1px solid var(--line)}
-    h2{margin:0 0 6px;font-size:28px}
-    .muted{color:var(--muted)}
-    .grid{display:grid;gap:16px}
-    .cards{grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
-    .card{background:var(--card);border:1px solid var(--line);border-radius:var(--rad);padding:16px}
-    .card h3{margin:6px 0 4px}
-    .kpi{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-top:14px}
-    .kpi .box{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:12px;text-align:center}
-    .work{grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
-    .work .item{border:1px solid var(--line);border-radius:18px;overflow:hidden;background:var(--panel)}
-    .thumb{display:block;aspect-ratio:16/9;background:#0d1320}
-    .thumb img{width:100%;height:100%;object-fit:cover;display:block}
-    .wrap{padding:14px}
-    .chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px}
-    .chip{border:1px solid var(--line);color:var(--muted);padding:2px 8px;border-radius:999px;font-size:12px}
-    form{display:grid;gap:10px;margin-top:12px}
-    input,textarea{width:100%;padding:12px;border-radius:12px;background:#0e131c;border:1px solid var(--line);color:var(--ink)}
-    .team{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
-    .person{display:flex;gap:12px;align-items:flex-start;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:14px}
-    .avatar{width:54px;height:54px;border-radius:50%;background:#0d1320}
-    footer{padding:28px 0;color:var(--muted);text-align:center}
-    @media (min-width:960px){.h1{font-size:64px}}
+    :root {
+      --bg: #0b0d12;
+      --panel: #11151d;
+      --card: #141a24;
+      --ink: #eaf0f6;
+      --muted: #9aa7b2;
+      --line: #1e2532;
+      --acc: #7dd3fc;
+      --acc2: #34d399;
+      --rad: 16px;
+      --pad: 22px;
+      --shadow: 0 8px 30px rgba(0,0,0,.35);
+      --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    body {
+      margin: 0;
+      color: var(--ink);
+      font: 16px/1.6 ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto;
+      background:
+        radial-gradient(1200px 600px at 20% -10%, rgba(52,211,153,.10), transparent 50%),
+        radial-gradient(900px 600px at 100% 0, rgba(125,211,252,.10), transparent 55%),
+        var(--bg);
+      overflow-x: hidden;
+    }
+    
+    body.no-scroll {
+      overflow: hidden;
+    }
+    
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+    
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 var(--pad);
+    }
+    
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(11,13,18,.6);
+      backdrop-filter: saturate(180%) blur(10px);
+      border-bottom: 1px solid var(--line);
+      transition: box-shadow .2s;
+    }
+    
+    header.scrolled {
+      box-shadow: 0 10px 30px rgba(0,0,0,.35);
+    }
+    
+    .bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+    
+    .brand {
+      font-weight: 800;
+      letter-spacing: .3px;
+      position: relative;
+      z-index: 1000;
+    }
+    
+    .tag {
+      color: var(--muted);
+      font-weight: 600;
+    }
+    
+    /* Buttons & links */
+    .btn {
+      display: inline-block;
+      padding: 12px 18px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--acc), var(--acc2));
+      color: #091016;
+      font-weight: 800;
+      box-shadow: 0 4px 20px rgba(60,200,170,.25);
+      transition: transform .15s, box-shadow .2s;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: 0.5s;
+    }
+    
+    .btn:hover::before {
+      left: 100%;
+    }
+    
+    .btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 8px 26px rgba(60,200,170,.35);
+    }
+    
+    .btn.ghost {
+      background: transparent;
+      color: var(--ink);
+      border: 1px solid var(--line);
+      box-shadow: none;
+    }
+    
+    /* Desktop nav */
+    .nav {
+      display: flex;
+      gap: 6px;
+      align-items: center;
+    }
+    
+    .nav a {
+      color: var(--muted);
+      padding: 8px 10px;
+      border-radius: 10px;
+      position: relative;
+      transition: var(--transition);
+    }
+    
+    .nav a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(to right, var(--acc), var(--acc2));
+      transition: all 0.3s ease;
+      transform: translateX(-50%);
+    }
+    
+    .nav a:hover {
+      background: #0e1320;
+      color: var(--ink);
+    }
+    
+    .nav a:hover::after {
+      width: 70%;
+    }
+    
+    /* Hamburger */
+    .hamburger {
+      display: none;
+      gap: 6px;
+      flex-direction: column;
+      cursor: pointer;
+      background: none;
+      border: 0;
+      padding: 8px;
+      position: relative;
+      z-index: 1000;
+    }
+    
+    .hamburger span {
+      width: 26px;
+      height: 2px;
+      background: var(--ink);
+      border-radius: 2px;
+      transition: .3s;
+      transform-origin: center;
+    }
+    
+    .hamburger.active span:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+    
+    .hamburger.active span:nth-child(2) {
+      opacity: 0;
+      transform: translateX(-10px);
+    }
+    
+    .hamburger.active span:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+    
+    /* Drawer + Backdrop */
+    .backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(3,6,12,.55);
+      backdrop-filter: blur(3px);
+      z-index: 998;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .3s ease;
+    }
+    
+    .backdrop.show {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    
+    .drawer {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      height: 100vh;
+      width: min(85vw, 360px);
+      z-index: 999;
+      background: rgba(11, 15, 24, 0.95);
+      backdrop-filter: blur(10px);
+      border-left: 1px solid var(--line);
+      display: flex;
+      flex-direction: column;
+      padding: 80px 24px 24px;
+      gap: 12px;
+      transition: right 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+      box-shadow: -10px 0 30px rgba(0, 0, 0, 0.3);
+    }
+    
+    .drawer.open {
+      right: 0;
+    }
+    
+    .drawer a {
+      font-size: 18px;
+      color: #e5edf6;
+      padding: 14px 16px;
+      border-radius: 10px;
+      transition: var(--transition);
+      transform: translateX(20px);
+      opacity: 0;
+      transition: all 0.4s ease;
+    }
+    
+    .drawer.open a {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    
+    .drawer a:nth-child(1) { transition-delay: 0.1s; }
+    .drawer a:nth-child(2) { transition-delay: 0.15s; }
+    .drawer a:nth-child(3) { transition-delay: 0.2s; }
+    .drawer a:nth-child(4) { transition-delay: 0.25s; }
+    .drawer a:nth-child(5) { transition-delay: 0.3s; }
+    
+    .drawer a:hover {
+      background: rgba(14, 19, 32, 0.6);
+      transform: translateX(5px);
+    }
+    
+    .drawer .spacer {
+      flex: 1;
+    }
+    
+    .drawer .btn {
+      font-size: 16px;
+      margin-top: 12px;
+    }
+    
+    @media (max-width: 860px) {
+      .nav {
+        display: none;
+      }
+      
+      .hamburger {
+        display: flex;
+      }
+    }
+    
+    /* Hero */
+    .hero {
+      padding: 96px 0 60px;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .h1 {
+      font-size: 42px;
+      line-height: 1.1;
+      margin: 0 0 10px;
+      background: linear-gradient(to right, var(--ink), var(--acc));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      animation: gradientShift 8s ease infinite;
+    }
+    
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    
+    .lead {
+      color: var(--muted);
+      max-width: 780px;
+    }
+    
+    .cta {
+      display: flex;
+      gap: 12px;
+      margin-top: 18px;
+      flex-wrap: wrap;
+    }
+    
+    .glow {
+      position: absolute;
+      inset: -10% -10% auto auto;
+      height: 420px;
+      width: 420px;
+      background: radial-gradient(closest-side, rgba(125,211,252,.18), transparent 70%);
+      filter: blur(24px);
+      z-index: -1;
+      animation: pulse 8s ease-in-out infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { opacity: 0.5; }
+      50% { opacity: 0.8; }
+    }
+    
+    /* Sections */
+    section {
+      padding: 64px 0;
+      border-top: 1px solid var(--line);
+    }
+    
+    h2 {
+      margin: 0 0 12px;
+      font-size: 28px;
+    }
+    
+    .muted {
+      color: var(--muted);
+    }
+    
+    .grid {
+      display: grid;
+      gap: 16px;
+    }
+    
+    .cards {
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    }
+    
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--rad);
+      padding: 16px;
+      transition: var(--transition);
+    }
+    
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow);
+      border-color: rgba(125, 211, 252, 0.2);
+    }
+    
+    .work {
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 18px;
+    }
+    
+    .item {
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      overflow: hidden;
+      background: var(--panel);
+      box-shadow: var(--shadow);
+      transition: transform .3s, box-shadow .3s;
+    }
+    
+    .item:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 35px rgba(0,0,0,.4);
+    }
+    
+    .thumb {
+      display: block;
+      aspect-ratio: 16/9;
+      background: #0d1320;
+      overflow: hidden;
+    }
+    
+    .thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+    
+    .item:hover .thumb img {
+      transform: scale(1.05);
+    }
+    
+    .wrap {
+      padding: 14px;
+    }
+    
+    .chips {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 6px;
+    }
+    
+    .chip {
+      border: 1px solid var(--line);
+      color: var(--muted);
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-size: 12px;
+      transition: var(--transition);
+    }
+    
+    .chip:hover {
+      background: rgba(125, 211, 252, 0.1);
+      color: var(--acc);
+      border-color: var(--acc);
+    }
+    
+    .team {
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+    
+    .person {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 14px;
+      transition: var(--transition);
+    }
+    
+    .person:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow);
+    }
+    
+    .avatar {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #1b2433, #0d1320);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .avatar::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(to bottom right, rgba(255,255,255,0.1), rgba(255,255,255,0));
+      transform: rotate(30deg);
+    }
+    
+    footer {
+      padding: 28px 0;
+      color: var(--muted);
+      text-align: center;
+    }
+    
+    /* Reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity .6s, transform .6s;
+    }
+    
+    .reveal.show {
+      opacity: 1;
+      transform: none;
+    }
+    
+    /* Floating elements */
+    .floating {
+      animation: floating 6s ease-in-out infinite;
+    }
+    
+    @keyframes floating {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    
+    /* Particle effect */
+    .particles {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: -1;
+      pointer-events: none;
+    }
+    
+    .particle {
+      position: absolute;
+      background: rgba(125, 211, 252, 0.3);
+      border-radius: 50%;
+      opacity: 0;
+      animation: particleFloat 15s linear infinite;
+    }
+    
+    @keyframes particleFloat {
+      0% {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 0;
+      }
+      10% {
+        opacity: 0.5;
+      }
+      90% {
+        opacity: 0.5;
+      }
+      100% {
+        transform: translateY(-100px) rotate(720deg);
+        opacity: 0;
+      }
+    }
+    
+    @media (min-width: 960px) {
+      .h1 {
+        font-size: 64px;
+      }
+    }
+    
+    @media (max-width: 540px) {
+      .h1 {
+        font-size: 34px;
+      }
+      
+      .hero {
+        padding: 84px 0 42px;
+      }
+      
+      .drawer {
+        width: 85vw;
+        padding: 70px 20px 20px;
+      }
+    }
   </style>
 </head>
 <body>
-<header>
+<header id="header">
   <div class="container bar">
     <div class="brand">KodraX <span class="tag">Studio</span></div>
-    <nav>
+
+    <!-- Desktop nav -->
+    <nav class="nav" aria-label="Primary">
       <a href="#work">Work</a>
       <a href="#services">Services</a>
       <a href="#team">Team</a>
       <a href="#contact">Contact</a>
       <a class="btn ghost" href="https://www.upwork.com/agencies/1965890569940564427/" target="_blank" rel="noopener">Upwork</a>
     </nav>
+
+    <!-- Mobile trigger -->
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="drawer">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </header>
 
+<!-- Backdrop + Drawer (mobile) -->
+<div id="backdrop" class="backdrop" hidden></div>
+<nav id="drawer" class="drawer" aria-label="Mobile" role="dialog" aria-modal="true" tabindex="-1">
+  <a href="#work">Work</a>
+  <a href="#services">Services</a>
+  <a href="#team">Team</a>
+  <a href="#contact">Contact</a>
+  <span class="spacer" aria-hidden="true"></span>
+  <a class="btn ghost" href="https://www.upwork.com/agencies/1965890569940564427/" target="_blank" rel="noopener">Upwork</a>
+</nav>
+
+<!-- Particle effect -->
+<div class="particles" id="particles"></div>
+
 <main class="container hero">
-  <h1 class="h1">Laravel backends, fast frontends & WordPress/Webflow rescue.</h1>
-  <p class="lead">
+  <div class="glow" aria-hidden="true"></div>
+  <h1 class="h1 reveal floating">Laravel backends, fast frontends & WordPress/Webflow rescue.</h1>
+  <p class="lead reveal">
     We build reliable APIs, ship responsive UIs, and fix production issues fast. Available most of the day —
     including weekends for urgent incidents. Performance, stability and long-term maintenance first.
   </p>
-  <div class="cta">
-    <a class="btn" href="#contact">Request a quote</a>
-    <a class="btn ghost" href="https://petararsic.rs/en" target="_blank" rel="noopener">See portfolio</a>
+  <div class="cta reveal">
+    <a class="btn" href="https://www.upwork.com/agencies/1965890569940564427/" target="_blank" rel="noopener">Hire us on Upwork</a>
+    <a class="btn ghost" href="mailto:petar.arsic14@hotmail.com">Email: petar.arsic14@hotmail.com</a>
   </div>
 </main>
 
-<section id="services">
+<section id="services" class="reveal">
   <div class="container">
-    <h2>Services</h2>
-    <p class="muted">End-to-end delivery for business applications — from database & APIs to UI and operations.</p>
+    <h2>What we deliver</h2>
     <div class="grid cards" style="margin-top:12px">
-      <div class="card"><h3>Laravel APIs</h3><p class="muted">Clean architecture, queues, Redis caching, testing, auth, docs.</p></div>
-      <div class="card"><h3>Frontends (Vue/React)</h3><p class="muted">SSR/SPA, accessible UI, clear flows without bloat.</p></div>
-      <div class="card"><h3>WordPress/Webflow</h3><p class="muted">Bug-fix, migrations, theme/plugin work, speed & CWV, SEO-safe deploys.</p></div>
-      <div class="card"><h3>Performance</h3><p class="muted">Core Web Vitals 90+, TTFB &lt;100ms, image/CDN strategy, Nginx tuning.</p></div>
-      <div class="card"><h3>Maintenance & DevOps</h3><p class="muted">Monitoring, backups, blue-green deploys, security, on-call support.</p></div>
+      <div class="card"><h3>Custom Websites</h3><p class="muted">WordPress, Webflow & headless CMS built for speed, SEO & conversions.</p></div>
+      <div class="card"><h3>Web Applications</h3><p class="muted">Laravel + React/Next dashboards, APIs, reports, payments & business logic.</p></div>
+      <div class="card"><h3>E-commerce</h3><p class="muted">WooCommerce/Webflow stores with custom checkout & performance optimisations.</p></div>
+      <div class="card"><h3>Mobile Apps</h3><p class="muted">React Native apps with booking, notifications & integrations.</p></div>
+      <div class="card"><h3>Integrations & DevOps</h3><p class="muted">APIs, automations, Docker, CI/CD & DigitalOcean hosting.</p></div>
     </div>
 
-    <div class="kpi">
-      <div class="box"><strong>5+ years</strong><div class="muted">Laravel & PHP</div></div>
-      <div class="box"><strong>2k+ hrs</strong><div class="muted">Upwork delivery (team)</div></div>
-      <div class="box"><strong>90+ CWV</strong><div class="muted">Consistent Lighthouse</div></div>
-      <div class="box"><strong>24/7</strong><div class="muted">Urgent incident response</div></div>
-    </div>
+    <h2 style="margin-top:28px">Why agencies choose us</h2>
+    <ul class="muted" style="margin:8px 0 0 18px">
+      <li>Full-stack expertise in one team</li>
+      <li>Clean, scalable code & responsive design</li>
+      <li>Transparent communication and on-time delivery</li>
+      <li>Proven experience powering high-volume systems (150k+ yearly transactions)</li>
+    </ul>
   </div>
 </section>
 
-<section id="work">
+<section id="work" class="reveal">
   <div class="container">
     <h2>Selected work</h2>
     <p class="muted">A few representative projects. More on our portfolio.</p>
@@ -135,54 +693,153 @@
   </div>
 </section>
 
-<section id="team">
+<section id="team" class="reveal">
   <div class="container">
     <h2>Team</h2>
-    <p class="muted">Small, senior, responsive. We own the problem until it’s solved.</p>
+    <p class="muted">Small, senior, responsive. We own the problem until it's solved.</p>
     <div class="grid team" style="margin-top:12px">
       <div class="person">
-        <div class="avatar"></div>
+        <div class="avatar" aria-hidden="true"></div>
         <div>
           <strong>Petar Arsić — Full-stack</strong>
           <div class="muted">Laravel APIs, React/Vue frontends, booking platforms, long-term maintenance.</div>
         </div>
       </div>
       <div class="person">
-        <div class="avatar"></div>
+        <div class="avatar" aria-hidden="true"></div>
         <div>
-          <strong>Nikola G. — WordPress/Webflow & Ops</strong>
-          <div class="muted">57+ completed Upwork jobs, 2k+ hours. Expert in bug fixing, speed, migrations, hosting & safe deployments.</div>
+          <strong>Nikola G. — WordPress/Webflow &amp; Ops</strong>
+          <div class="muted">57+ completed Upwork jobs, 2k+ hours. Expert in bug fixing, speed, migrations, hosting &amp; safe deployments.</div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<section id="contact">
+<section id="contact" class="reveal">
   <div class="container">
-    <h2>WordPress/Webflow Rescue</h2>
-    <p class="muted">Site down, malware, slow TTFB, broken checkout, or migration needed? We jump in fast and fix without SEO damage.</p>
+    <h2>Get in touch</h2>
+    <p class="muted">Hire us on Upwork or reach out directly via email.</p>
     <div class="cta" style="margin-top:8px">
-      <a class="btn" href="#form">Start a rescue</a>
-      <a class="btn ghost" href="https://www.upwork.com/agencies/1965890569940564427/" target="_blank" rel="noopener">Hire us on Upwork</a>
+      <a class="btn" href="https://www.upwork.com/agencies/1965890569940564427/" target="_blank" rel="noopener">Hire us on Upwork</a>
+      <a class="btn ghost" href="mailto:petar.arsic14@hotmail.com">Email: petar.arsic14@hotmail.com</a>
     </div>
-
-    <h2 id="form" style="margin-top:36px">Contact</h2>
-    <p class="muted">Tell us briefly what you need — we reply quickly (weekends for urgent issues).</p>
-    <!-- Replace YOUR_ID below (Formspree/Netlify/Basin). -->
-    <form action="https://formspree.io/f/YOUR_ID" method="POST">
-      <input name="name" placeholder="Your name" required>
-      <input name="email" type="email" placeholder="Email" required>
-      <textarea name="message" rows="4" placeholder="What do you need?" required></textarea>
-      <button class="btn" type="submit">Send</button>
-      <a class="btn ghost" style="margin-left:8px" href="mailto:hello@kodrax.studio">Email instead</a>
-    </form>
+    <p class="muted" style="margin-top:18px">➤ Let's build your next project — reliable, scalable, and designed to grow.</p>
   </div>
 </section>
 
 <footer>
   © <span id="y"></span> KodraX Studio · Niš, RS · hello@kodrax.studio
 </footer>
-<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+
+<script>
+  // Year + shadow
+  document.getElementById('y').textContent = new Date().getFullYear();
+  const header = document.getElementById('header');
+  const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 6);
+  onScroll(); window.addEventListener('scroll', onScroll, {passive:true});
+
+  // Drawer logic with backdrop, ESC, focus-trap
+  const burger = document.getElementById('hamburger');
+  const drawer = document.getElementById('drawer');
+  const backdrop = document.getElementById('backdrop');
+  const focusables = () => drawer.querySelectorAll('a,button,[tabindex]:not([tabindex="-1"])');
+
+  function openDrawer(){
+    backdrop.hidden = false;
+    requestAnimationFrame(() => { 
+      backdrop.classList.add('show'); 
+      drawer.classList.add('open'); 
+    });
+    burger.classList.add('active'); 
+    burger.setAttribute('aria-expanded','true');
+    document.body.classList.add('no-scroll');
+    const f = focusables(); 
+    if (f.length) f[0].focus();
+  }
+  
+  function closeDrawer(){
+    backdrop.classList.remove('show'); 
+    drawer.classList.remove('open');
+    burger.classList.remove('active'); 
+    burger.setAttribute('aria-expanded','false');
+    document.body.classList.remove('no-scroll');
+    setTimeout(() => { backdrop.hidden = true; }, 200);
+    burger.focus();
+  }
+  
+  burger.addEventListener('click', () => {
+    if (drawer.classList.contains('open')) {
+      closeDrawer();
+    } else {
+      openDrawer();
+    }
+  });
+  
+  backdrop.addEventListener('click', closeDrawer);
+  
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && drawer.classList.contains('open')) {
+      closeDrawer();
+    }
+    
+    if (e.key === 'Tab' && drawer.classList.contains('open')) {
+      const f = Array.from(focusables()); 
+      if (!f.length) return;
+      
+      const first = f[0];
+      const last = f[f.length-1];
+      
+      if (e.shiftKey && document.activeElement === first) { 
+        last.focus(); 
+        e.preventDefault(); 
+      } else if (!e.shiftKey && document.activeElement === last) { 
+        first.focus(); 
+        e.preventDefault(); 
+      }
+    }
+  });
+
+  // Close drawer on link click
+  drawer.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', closeDrawer);
+  });
+
+  // Reveal on scroll
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { 
+      if (e.isIntersecting) e.target.classList.add('show'); 
+    });
+  }, { threshold: .08 });
+  
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // Create particle effect
+  function createParticles() {
+    const container = document.getElementById('particles');
+    const particleCount = 20;
+    
+    for (let i = 0; i < particleCount; i++) {
+      const particle = document.createElement('div');
+      particle.classList.add('particle');
+      
+      // Random size between 2 and 6px
+      const size = Math.random() * 4 + 2;
+      particle.style.width = `${size}px`;
+      particle.style.height = `${size}px`;
+      
+      // Random position
+      particle.style.left = `${Math.random() * 100}%`;
+      
+      // Random animation delay
+      particle.style.animationDelay = `${Math.random() * 15}s`;
+      
+      container.appendChild(particle);
+    }
+  }
+  
+  // Initialize particles
+  createParticles();
+</script>
 </body>
 </html>

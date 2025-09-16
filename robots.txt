@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://kodrax.vercel.app/sitemap.xml
