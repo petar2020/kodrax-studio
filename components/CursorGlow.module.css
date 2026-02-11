@@ -1,0 +1,26 @@
+.glow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(125, 211, 252, 0.06) 0%,
+    rgba(52, 211, 153, 0.03) 35%,
+    transparent 70%
+  );
+  pointer-events: none;
+  z-index: 1;
+  translate: -300px -300px;
+  margin-top: -300px;
+  margin-left: -300px;
+  will-change: translate;
+}
+
+@media (max-width: 860px) {
+  .glow {
+    display: none;
+  }
+}

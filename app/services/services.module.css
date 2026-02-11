@@ -1,0 +1,28 @@
+﻿.process {
+  margin-top: 1rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.step {
+  border: 1px solid var(--line);
+  border-radius: var(--rad);
+  background: var(--card);
+  padding: 1rem;
+}
+
+.step h3 {
+  margin: 0;
+  font-family: var(--font-heading);
+}
+
+.step p {
+  margin: 0.4rem 0 0;
+  color: var(--muted);
+}
+
+@media (min-width: 860px) {
+  .process {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}

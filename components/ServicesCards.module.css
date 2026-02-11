@@ -1,0 +1,73 @@
+﻿.section {
+  position: relative;
+}
+
+.grid {
+  margin-top: 1.05rem;
+  display: grid;
+  gap: 1.1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.card {
+  border: 1px solid var(--line);
+  border-radius: var(--rad);
+  background: linear-gradient(145deg, rgba(20, 26, 36, 0.94), rgba(12, 17, 24, 0.98));
+  padding: 1.15rem;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  position: relative;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--acc), var(--acc2));
+  border-radius: var(--rad) var(--rad) 0 0;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(125, 211, 252, 0.34);
+  box-shadow: var(--shadow);
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 1.13rem;
+  font-family: var(--font-heading);
+}
+
+.card p {
+  margin: 0.72rem 0 0;
+  color: var(--muted);
+}
+
+.reasons {
+  margin-top: 1.8rem;
+}
+
+.reasons ul {
+  margin: 0.65rem 0 0;
+  padding-inline-start: 1.15rem;
+  color: var(--muted);
+}
+
+.reasons li + li {
+  margin-top: 0.45rem;
+}

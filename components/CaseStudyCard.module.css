@@ -1,0 +1,107 @@
+.card {
+  display: grid;
+  border: 1px solid var(--line);
+  border-radius: var(--rad);
+  background: var(--card);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(125, 211, 252, 0.4);
+}
+
+.thumb {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #0d1320;
+}
+
+.image {
+  object-fit: cover;
+  transition: transform 0.45s ease;
+}
+
+.card:hover .image {
+  transform: scale(1.05);
+}
+
+.body {
+  display: grid;
+  gap: 0.72rem;
+  padding: 0.95rem;
+}
+
+.meta {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  color: var(--muted);
+  font-size: 0.79rem;
+}
+
+.meta span {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.12rem 0.5rem;
+}
+
+.title {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  line-height: 1.2;
+}
+
+.summary {
+  margin: 0;
+  color: var(--muted);
+}
+
+.metrics {
+  display: grid;
+  gap: 0.45rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.metricItem {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 0.5rem;
+  background: rgba(12, 16, 24, 0.9);
+}
+
+.metricItem p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.72rem;
+}
+
+.metricItem strong {
+  margin-top: 0.2rem;
+  display: block;
+  font-size: 0.93rem;
+}
+
+.stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.link {
+  margin-top: 0.2rem;
+  display: inline-flex;
+  font-weight: 700;
+  color: var(--acc);
+}
+
+@media (max-width: 640px) {
+  .metrics {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,28 @@
+﻿.section {
+  position: relative;
+}
+
+.grid {
+  display: grid;
+  gap: 1.2rem;
+}
+
+.cta {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+.note {
+  margin: 1rem 0 0;
+  color: var(--muted);
+}
+
+@media (min-width: 940px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.8rem;
+    align-items: start;
+  }
+}

@@ -1,0 +1,71 @@
+.form {
+  display: grid;
+  gap: 0.95rem;
+}
+
+.field {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.field span {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.field input,
+.field textarea,
+.field select {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--panel);
+  color: var(--ink);
+  font: inherit;
+  padding: 0.78rem 0.82rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.field textarea {
+  resize: vertical;
+  min-height: 200px;
+}
+
+.field input:focus,
+.field textarea:focus,
+.field select:focus {
+  outline: none;
+  border-color: rgba(125, 211, 252, 0.95);
+  box-shadow: 0 0 0 2px rgba(125, 211, 252, 0.18);
+}
+
+.submit {
+  width: 100%;
+  gap: 0.4rem;
+}
+
+.loadingIcon {
+  animation: spin 1s linear infinite;
+}
+
+.success {
+  margin: 0;
+  color: #8ef0ba;
+  font-size: 0.92rem;
+}
+
+.error {
+  margin: 0;
+  color: #fca5a5;
+  font-size: 0.9rem;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}

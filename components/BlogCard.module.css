@@ -1,0 +1,82 @@
+.card {
+  display: grid;
+  border: 1px solid var(--line);
+  border-radius: var(--rad);
+  overflow: hidden;
+  background: var(--card);
+  box-shadow: var(--shadow);
+  transition: transform 0.28s ease, border-color 0.28s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(125, 211, 252, 0.4);
+}
+
+.thumb {
+  position: relative;
+  display: block;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #0d1320;
+}
+
+.image {
+  object-fit: cover;
+  transition: transform 0.45s ease;
+}
+
+.card:hover .image {
+  transform: scale(1.08);
+}
+
+.content {
+  padding: 0.95rem;
+}
+
+.badge {
+  display: inline-flex;
+  border-radius: 999px;
+  border: 1px solid rgba(125, 211, 252, 0.35);
+  color: var(--acc);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0.14rem 0.5rem;
+}
+
+.title {
+  margin: 0.55rem 0 0;
+  font-size: 1.24rem;
+  line-height: 1.25;
+}
+
+.description {
+  margin: 0.46rem 0 0;
+  color: var(--muted);
+}
+
+.meta {
+  margin-top: 0.74rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  color: var(--muted);
+  font-size: 0.84rem;
+}
+
+.readMore {
+  margin-top: 0.72rem;
+  display: inline-flex;
+  color: var(--acc);
+  font-weight: 700;
+  opacity: 0.7;
+  transform: translateX(-4px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.card:hover .readMore {
+  opacity: 1;
+  transform: translateX(0);
+}

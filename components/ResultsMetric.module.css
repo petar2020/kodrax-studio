@@ -1,0 +1,70 @@
+.metricCard {
+  display: flex;
+  gap: 0.85rem;
+  align-items: flex-start;
+  padding: 1.15rem;
+  border-radius: 16px;
+  border: 1px solid transparent;
+  background:
+    linear-gradient(var(--card), var(--card)) padding-box,
+    linear-gradient(135deg, rgba(125, 211, 252, 0.6), rgba(52, 211, 153, 0.45)) border-box;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.metricCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.metricIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  border: 1px solid rgba(125, 211, 252, 0.25);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--acc);
+  background: rgba(9, 14, 20, 0.85);
+}
+
+.iconSpinning {
+  animation: spin 4s linear infinite;
+}
+
+.metricContent {
+  min-width: 0;
+}
+
+.metricValue {
+  margin: 0;
+  font-size: clamp(1.9rem, 4.2vw, 2.5rem);
+  font-weight: 800;
+  line-height: 1;
+  color: var(--acc);
+  font-family: var(--font-heading);
+}
+
+.metricLabel {
+  margin-top: 0.38rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.76rem;
+  color: var(--muted);
+}
+
+.metricDetail {
+  margin-top: 0.42rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}

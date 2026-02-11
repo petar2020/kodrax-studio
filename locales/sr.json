@@ -1,0 +1,229 @@
+{
+  "site": {
+    "email": "hello@kodrax.rs",
+    "address": "Niš, Srbija",
+    "phone": "+381 64 XXXXXXX"
+  },
+  "header": {
+    "primaryNavLabel": "Glavna navigacija",
+    "mobileNavLabel": "Mobilni meni",
+    "openMenu": "Otvori meni",
+    "upwork": "Upwork",
+    "language": "Jezik",
+    "nav": {
+      "work": "Projekti",
+      "services": "Usluge",
+      "team": "Tim",
+      "caseStudies": "Studije slučaja",
+      "blog": "Blog",
+      "contact": "Kontakt"
+    }
+  },
+  "footer": {
+    "rights": "KodraX Studio"
+  },
+  "hero": {
+    "title": "Full-stack isporuka. Od Laravel-a do React Native-a.",
+    "lead": "Isporučujemo Laravel API-je, React i Next.js frontende, React Native mobilne aplikacije i spasavamo WordPress sajtove. Mali senior tim, produkcioni kvalitet.",
+    "ctaUpwork": "Zakaži preko Upwork-a",
+    "ctaEmailPrefix": "Email"
+  },
+  "servicesCards": {
+    "title": "Šta isporučujemo",
+    "whyTitle": "Zašto timovi biraju nas",
+    "items": [
+      {
+        "title": "Booking sistemi",
+        "description": "Tokovi rezervacija, checkout i plaćanja za transportne i uslužne biznise."
+      },
+      {
+        "title": "Web aplikacije",
+        "description": "Laravel API + React/Next.js proizvodi za operativne timove i korisničke portale."
+      },
+      {
+        "title": "E-commerce",
+        "description": "WooCommerce prodavnice sa optimizovanim checkout tokovima i performansama."
+      },
+      {
+        "title": "Mobilne aplikacije",
+        "description": "React Native aplikacije za iOS i Android sa booking i account tokovima."
+      },
+      {
+        "title": "Integracije i DevOps",
+        "description": "Automatizacija, CI/CD, Docker i stabilna infrastruktura za produkciju."
+      }
+    ],
+    "reasons": [
+      "Business-first pristup i jasni KPI ciljevi",
+      "Čist, održiv kod i predvidljiva arhitektura",
+      "Brza i transparentna komunikacija",
+      "Iskustvo sa sistemima velikog opterećenja"
+    ]
+  },
+  "workGrid": {
+    "title": "Istaknuti projekti",
+    "lead": "Projekti predstavljeni kao poslovni case: problem, rešenje i rezultat.",
+    "viewCaseStudy": "Pogledaj studiju",
+    "liveDemo": "Live demo",
+    "projects": [
+      {
+        "title": "Bozic-Konig — Online rezervacije",
+        "description": "Kompletan booking tok sa pretragom linija, izborom sedišta i checkout-om povezan sa Laravel API-jem.",
+        "alt": "Bozic-Konig interfejs za online rezervacije"
+      },
+      {
+        "title": "Srbija Tours — Prodaja karata",
+        "description": "WordPress frontend za veliki saobraćaj integrisan sa Laravel back-office-om i Redis keš slojem.",
+        "alt": "Srbija Tours sajt za prodaju karata"
+      },
+      {
+        "title": "Srbija Tours — Mobilna aplikacija",
+        "description": "React Native aplikacija za iOS i Android sa redovima vožnje, push notifikacijama i mobilnim kartama.",
+        "alt": "Srbija Tours mobilna aplikacija"
+      },
+      {
+        "title": "DriveSoft — Back-office sistem",
+        "description": "Laravel 10 admin panel sa queue obradom, upravljanjem rolama, izveštavanjem i Docker deploy-om.",
+        "alt": "DriveSoft back-office dashboard"
+      },
+      {
+        "title": "DriveSoft — Demo rezervacije",
+        "description": "React demo aplikacija sa višekoračnim booking tokom, internacionalizacijom i Tailwind UI-jem.",
+        "alt": "DriveSoft demo booking tok"
+      },
+      {
+        "title": "Prostor Miljenko Dereta",
+        "description": "WordPress sajt sa Gutenberg blokovima, optimizacijom performansi i SEO poboljšanjima.",
+        "alt": "Prostor Miljenko Dereta sajt"
+      }
+    ]
+  },
+  "team": {
+    "title": "Naš tim",
+    "description": "Senior tim koji preuzima odgovornost za isporuku od discovery-ja do produkcije.",
+    "members": [
+      {
+        "role": "Full-stack partner",
+        "description": "Laravel API arhitektura, React/Next frontendi i booking sistemi sa fokusom na konverziju."
+      },
+      {
+        "role": "WordPress/Webflow i operativa",
+        "description": "57+ završenih Upwork poslova, 2k+ sati, ekspertiza za rescue, migracije i performance."
+      }
+    ]
+  },
+  "contactSection": {
+    "title": "Pokrenimo projekat",
+    "description": "Pošaljite scope, rok i blokere. Odgovaramo brzo i za hitne produkcione situacije.",
+    "ctaUpwork": "Upwork konsultacije",
+    "ctaEmailPrefix": "Email",
+    "note": "Gradimo pouzdane i skalabilne proizvode koji direktno podržavaju rast."
+  },
+  "contactForm": {
+    "nameLabel": "Ime i prezime",
+    "namePlaceholder": "Vaše ime",
+    "emailLabel": "Email",
+    "emailPlaceholder": "ime@kompanija.com",
+    "serviceLabel": "Usluga",
+    "servicePlaceholder": "Izaberi uslugu",
+    "serviceOptions": [
+      "Booking sistemi",
+      "Web aplikacije",
+      "WordPress i performance",
+      "E-commerce",
+      "Konsalting"
+    ],
+    "messageLabel": "Poruka",
+    "messagePlaceholder": "Opišite projekat, cilj i rok",
+    "invalidEmail": "Unesite validnu email adresu.",
+    "networkError": "Zahtev je istekao. Pokušajte ponovo za par trenutaka.",
+    "submitting": "Šaljemo...",
+    "submit": "Pošalji poruku",
+    "success": "Hvala! Odgovorićemo u roku 24h.",
+    "alertMessage": "Čuvamo vašu poruku. Kontaktiraćemo vas brže."
+  },
+  "homePage": {
+    "title": "Full-stack studio — Laravel, React, Next.js, React Native i WordPress",
+    "description": "KodraX Studio razvija Laravel API-je, React i Next.js frontende, React Native mobilne aplikacije i WordPress rešenja."
+  },
+  "aboutPage": {
+    "metaTitle": "O nama i timu",
+    "metaDescription": "Upoznajte KodraX Studio tim i način na koji vodimo tehničku isporuku.",
+    "title": "O KodraX Studio",
+    "intro": "Senior full-stack partner za booking i konverzijski orijentisane digitalne proizvode.",
+    "principles": [
+      {
+        "title": "Pragmatična arhitektura",
+        "text": "Tehničke odluke donosimo kroz poslovni uticaj, održavanje i dugoročnu stabilnost."
+      },
+      {
+        "title": "Brza reakcija na incidente",
+        "text": "Kada produkcija ima problem, prioritet je stabilizacija sistema i jasan rollback plan."
+      },
+      {
+        "title": "Dugoročno partnerstvo",
+        "text": "Nakon lansiranja ostajemo uključeni kroz monitoring, optimizaciju i roadmap realizaciju."
+      }
+    ],
+    "teamTitle": "Naš tim",
+    "teamDescription": "Direktna komunikacija, jasne procene i end-to-end ownership isporuke."
+  },
+  "servicesPage": {
+    "metaTitle": "Usluge",
+    "metaDescription": "Laravel API-ji, React i Next.js frontendi, React Native mobilne aplikacije, WordPress rešenja i DevOps.",
+    "title": "Servisni opseg",
+    "intro": "Radimo greenfield proizvode, migracije, rescue projekte i optimizacije backend/frontend tokova.",
+    "process": [
+      {
+        "title": "1. Discovery",
+        "text": "Definišemo zahteve, rizike i milestone plan pre implementacije."
+      },
+      {
+        "title": "2. Build",
+        "text": "Isporuka ide iterativno, uz punu vidljivost statusa i kontrolu scope-a."
+      },
+      {
+        "title": "3. Stabilizacija",
+        "text": "Nakon go-live faze merimo performanse, uklanjamo bottleneck-ove i učvršćujemo bazu sistema."
+      }
+    ]
+  },
+  "contactPage": {
+    "metaTitle": "Kontakt",
+    "metaDescription": "Podelite scope projekta i dobićete brz odgovor od KodraX tima.",
+    "title": "Kontakt",
+    "description": "Napišite stack, blokere i rokove. Uključujemo se brzo za isporuku i rescue rad."
+  },
+  "blogPage": {
+    "metaTitle": "Blog",
+    "metaDescription": "Praktični tekstovi o Laravel API-jima, performansama i migracijama.",
+    "title": "Blog i vodiči",
+    "intro": "Tehničke beleške i konkretni implementation playbook-ovi iz realnih projekata.",
+    "readArticle": "Pročitaj tekst",
+    "backToBlog": "Nazad na blog",
+    "notFound": "Tekst nije pronađen"
+  },
+  "caseStudiesPage": {
+    "metaTitle": "Studije slučaja",
+    "metaDescription": "Detaljni prikazi projekata: Laravel back-office, React frontendi, React Native aplikacije i WordPress rešenja sa merljivim rezultatima.",
+    "kicker": "Studije slučaja",
+    "title": "Rezultati booking i konverzijskih projekata",
+    "intro": "Svaki case prikazuje izazov, rešenje i merljiv uticaj na rast i operativnu efikasnost.",
+    "openCaseStudy": "Otvori studiju",
+    "backToCaseStudies": "Nazad na studije",
+    "notFound": "Studija nije pronađena",
+    "labels": {
+      "client": "Klijent",
+      "duration": "Trajanje",
+      "budget": "Budžet",
+      "results": "Ključne metrike",
+      "challenge": "Izazov",
+      "solution": "Rešenje",
+      "timeline": "Timeline i proces",
+      "technologies": "Korišćene tehnologije",
+      "beforeAfter": "Pre / posle",
+      "result": "Rezultat",
+      "walkthrough": "Video pregled projekta"
+    }
+  }
+}

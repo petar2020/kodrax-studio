@@ -1,0 +1,229 @@
+{
+  "site": {
+    "email": "hello@kodrax.studio",
+    "address": "Nis, Serbia",
+    "phone": "+381 64 XXXXXXX"
+  },
+  "header": {
+    "primaryNavLabel": "Primary",
+    "mobileNavLabel": "Mobile",
+    "openMenu": "Open menu",
+    "upwork": "Upwork",
+    "language": "Language",
+    "nav": {
+      "work": "Work",
+      "services": "Services",
+      "team": "Team",
+      "caseStudies": "Case Studies",
+      "blog": "Blog",
+      "contact": "Contact"
+    }
+  },
+  "footer": {
+    "rights": "KodraX Studio"
+  },
+  "hero": {
+    "title": "Full-stack builds. Laravel to React Native.",
+    "lead": "We ship Laravel APIs, React & Next.js frontends, React Native mobile apps, and rescue broken WordPress sites. Small senior team, production-grade delivery.",
+    "ctaUpwork": "Hire us on Upwork",
+    "ctaEmailPrefix": "Email"
+  },
+  "servicesCards": {
+    "title": "What we deliver",
+    "whyTitle": "Why agencies choose us",
+    "items": [
+      {
+        "title": "Custom Websites",
+        "description": "WordPress, Webflow and headless CMS builds optimized for speed, SEO and conversions."
+      },
+      {
+        "title": "Web Applications",
+        "description": "Laravel plus React/Next.js dashboards, APIs, reporting, payments and business logic."
+      },
+      {
+        "title": "E-commerce",
+        "description": "WooCommerce/Webflow stores with tailored checkout and performance optimization."
+      },
+      {
+        "title": "Mobile Apps",
+        "description": "React Native applications with booking, notifications and external integrations."
+      },
+      {
+        "title": "Integrations and DevOps",
+        "description": "Automations, Docker, CI/CD, and resilient infrastructure deployment."
+      }
+    ],
+    "reasons": [
+      "Full-stack expertise in one team",
+      "Clean, scalable code and responsive design",
+      "Transparent communication and on-time delivery",
+      "Proven production experience with high-volume systems"
+    ]
+  },
+  "workGrid": {
+    "title": "Selected work",
+    "lead": "A few representative projects from our delivery pipeline.",
+    "viewCaseStudy": "View Case Study",
+    "liveDemo": "Live Demo",
+    "projects": [
+      {
+        "title": "Bozic-Konig — Online Reservations",
+        "description": "Full booking flow with route search, seat selection and checkout connected to a Laravel API.",
+        "alt": "Bozic-Konig online reservation interface"
+      },
+      {
+        "title": "Serbia Tours — Ticket Sales",
+        "description": "High-traffic WordPress frontend integrated with a Laravel back-office and Redis cache layer.",
+        "alt": "Serbia Tours ticket booking website"
+      },
+      {
+        "title": "Serbia Tours — Mobile App",
+        "description": "React Native app for iOS and Android with live schedules, push notifications and mobile ticketing.",
+        "alt": "Serbia Tours mobile application"
+      },
+      {
+        "title": "DriveSoft — Back-office System",
+        "description": "Laravel 10 admin panel with queue processing, role management, reporting and Docker deployment.",
+        "alt": "DriveSoft back-office dashboard"
+      },
+      {
+        "title": "DriveSoft — Demo Reservations",
+        "description": "React demo app with multi-step booking flow, internationalization and Tailwind UI.",
+        "alt": "DriveSoft demo booking flow"
+      },
+      {
+        "title": "Prostor Miljenko Dereta",
+        "description": "WordPress site with Gutenberg blocks, performance optimization and SEO hardening.",
+        "alt": "Prostor Miljenko Dereta website"
+      }
+    ]
+  },
+  "team": {
+    "title": "Team",
+    "description": "Small, senior, responsive. We own the problem until it is solved.",
+    "members": [
+      {
+        "role": "Full-stack",
+        "description": "Laravel APIs, React/Vue frontends, booking platforms and long-term maintenance."
+      },
+      {
+        "role": "WordPress/Webflow and Ops",
+        "description": "57+ completed Upwork jobs, 2k+ hours, expert in bug fixing, speed, migrations, hosting and safe deployments."
+      }
+    ]
+  },
+  "contactSection": {
+    "title": "Get in touch",
+    "description": "Share your scope and timeline. We respond quickly, including urgent weekend incidents.",
+    "ctaUpwork": "Hire us on Upwork",
+    "ctaEmailPrefix": "Email",
+    "note": "Let's build your next project - reliable, scalable, and ready to grow."
+  },
+  "contactForm": {
+    "nameLabel": "Name",
+    "namePlaceholder": "Your name",
+    "emailLabel": "Email",
+    "emailPlaceholder": "name@company.com",
+    "serviceLabel": "Service",
+    "servicePlaceholder": "Choose a service",
+    "serviceOptions": [
+      "Booking Systems",
+      "Web Applications",
+      "WordPress and Performance",
+      "E-commerce",
+      "Consulting"
+    ],
+    "messageLabel": "Message",
+    "messagePlaceholder": "Tell us what you are building",
+    "invalidEmail": "Please enter a valid email address.",
+    "networkError": "Request timed out. Please try again in a moment.",
+    "submitting": "Sending...",
+    "submit": "Send message",
+    "success": "Thank you! We will reply within 24h.",
+    "alertMessage": "We are saving your message. We will contact you quickly."
+  },
+  "homePage": {
+    "title": "Full-stack Studio — Laravel, React, Next.js, React Native & WordPress",
+    "description": "KodraX Studio builds Laravel APIs, React & Next.js frontends, React Native mobile apps, and delivers WordPress solutions."
+  },
+  "aboutPage": {
+    "metaTitle": "About and Team",
+    "metaDescription": "Meet the KodraX Studio team and how we structure technical delivery.",
+    "title": "About KodraX Studio",
+    "intro": "We are a small senior team focused on robust Laravel backends, performant frontends, and safe migrations from legacy stacks.",
+    "principles": [
+      {
+        "title": "Pragmatic architecture",
+        "text": "We prioritize maintainable systems over hype, with explicit tradeoffs and clean handoff docs."
+      },
+      {
+        "title": "Fast incident response",
+        "text": "When production fails, we treat it as an engineering emergency and stabilize first."
+      },
+      {
+        "title": "Long-term ownership",
+        "text": "We stay available for monitoring, optimization, and roadmap execution after launch."
+      }
+    ],
+    "teamTitle": "Core team",
+    "teamDescription": "Direct communication, transparent estimates, and end-to-end ownership of delivery."
+  },
+  "servicesPage": {
+    "metaTitle": "Services",
+    "metaDescription": "Laravel APIs, React & Next.js frontends, React Native mobile apps, WordPress solutions and DevOps.",
+    "title": "Service coverage",
+    "intro": "Engagements include greenfield builds, migrations, rescue projects, and backend/frontend optimization.",
+    "process": [
+      {
+        "title": "1. Discovery",
+        "text": "We align on requirements, technical risk, and clear milestones before implementation."
+      },
+      {
+        "title": "2. Build",
+        "text": "You get iterative delivery with status visibility, code quality checks, and predictable scope control."
+      },
+      {
+        "title": "3. Stabilize",
+        "text": "After launch we track performance, fix bottlenecks, and secure a maintainable long-term baseline."
+      }
+    ]
+  },
+  "contactPage": {
+    "metaTitle": "Contact",
+    "metaDescription": "Share your project scope and get a fast response from KodraX Studio.",
+    "title": "Contact us",
+    "description": "Describe your stack, blockers, and deadlines. We can jump in quickly for delivery or rescue work."
+  },
+  "blogPage": {
+    "metaTitle": "Blog",
+    "metaDescription": "Guides on Laravel APIs, WordPress performance, and Next.js migration strategy.",
+    "title": "Blog",
+    "intro": "Technical notes and practical implementation playbooks from the studio.",
+    "readArticle": "Read article",
+    "backToBlog": "Back to blog",
+    "notFound": "Post not found"
+  },
+  "caseStudiesPage": {
+    "metaTitle": "Case Studies",
+    "metaDescription": "Detailed project breakdowns: Laravel back-office, React frontends, React Native apps, and WordPress builds with measurable outcomes.",
+    "kicker": "Case Studies",
+    "title": "Business outcomes from booking and conversion projects",
+    "intro": "From transport ticketing to WordPress recovery, each case includes challenge, delivery approach, and measurable impact.",
+    "openCaseStudy": "Open case study",
+    "backToCaseStudies": "Back to case studies",
+    "notFound": "Case study not found",
+    "labels": {
+      "client": "Client",
+      "duration": "Duration",
+      "budget": "Budget",
+      "results": "Results metrics",
+      "challenge": "Challenge",
+      "solution": "Solution",
+      "timeline": "Timeline and process",
+      "technologies": "Technologies used",
+      "beforeAfter": "Before / after",
+      "result": "Result",
+      "walkthrough": "Project walkthrough"
+    }
+  }
+}

@@ -1,0 +1,62 @@
+﻿.article {
+  border: 1px solid var(--line);
+  border-radius: var(--rad);
+  background: var(--card);
+  padding: clamp(1rem, 3vw, 1.6rem);
+}
+
+.meta {
+  margin: 0 0 0.65rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  color: var(--muted);
+  font-size: 0.86rem;
+}
+
+.title {
+  margin: 0;
+  font-size: clamp(1.75rem, 5vw, 2.45rem);
+  line-height: 1.15;
+  font-family: var(--font-heading);
+}
+
+.description {
+  margin: 0.6rem 0 0;
+  color: var(--muted);
+}
+
+.content {
+  margin-top: 1.25rem;
+  color: #dbe4ec;
+}
+
+.content h2,
+.content h3 {
+  margin: 1.35rem 0 0.45rem;
+  font-family: var(--font-heading);
+}
+
+.content p {
+  margin: 0.6rem 0;
+}
+
+.content ul,
+.content ol {
+  margin: 0.5rem 0;
+  padding-inline-start: 1.25rem;
+}
+
+.content li + li {
+  margin-top: 0.32rem;
+}
+
+.back {
+  display: inline-flex;
+  margin-bottom: 1rem;
+  color: var(--muted);
+}
+
+.back:hover {
+  color: var(--ink);
+}

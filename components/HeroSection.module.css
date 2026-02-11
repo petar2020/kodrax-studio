@@ -1,0 +1,182 @@
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(5.5rem, 10vw, 7.5rem) 0 3.5rem;
+}
+
+/* ── Orbit ring ── */
+.orbitRing {
+  position: absolute;
+  top: -180px;
+  right: -180px;
+  width: 520px;
+  height: 520px;
+  border-radius: 50%;
+  border: 1px solid rgba(125, 211, 252, 0.08);
+  animation: orbitSpin 20s linear infinite;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.orbitDot {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  margin-left: -4px;
+  margin-top: -4px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--acc), var(--acc2));
+  box-shadow: 0 0 16px rgba(125, 211, 252, 0.6), 0 0 40px rgba(125, 211, 252, 0.2);
+}
+
+/* ── Glow blobs ── */
+.glow {
+  position: absolute;
+  top: -15%;
+  right: -8%;
+  width: clamp(300px, 45vw, 500px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(closest-side, rgba(125, 211, 252, 0.15), transparent 70%);
+  filter: blur(30px);
+  z-index: -1;
+  animation: pulse 8s ease-in-out infinite;
+}
+
+.glow2 {
+  position: absolute;
+  bottom: -20%;
+  left: -10%;
+  width: clamp(200px, 30vw, 380px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(closest-side, rgba(52, 211, 153, 0.1), transparent 70%);
+  filter: blur(30px);
+  z-index: -1;
+  animation: pulse 10s ease-in-out 2s infinite;
+}
+
+/* ── Kicker row ── */
+.kickerRow {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: 1.2rem;
+  flex-wrap: wrap;
+}
+
+.kickerBadge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.28rem 0.72rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: var(--acc);
+  border: 1px solid rgba(125, 211, 252, 0.2);
+  background: rgba(125, 211, 252, 0.06);
+}
+
+.statusDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--acc2);
+  box-shadow: 0 0 8px rgba(52, 211, 153, 0.6);
+  animation: blink 2s ease-in-out infinite;
+}
+
+.statusText {
+  font-size: 0.8rem;
+  color: var(--acc2);
+  font-weight: 500;
+}
+
+/* ── Title ── */
+.title {
+  margin: 0 0 1rem;
+  max-width: 18ch;
+  font-family: var(--font-heading);
+  font-size: clamp(2.6rem, 7.5vw, 4.5rem);
+  line-height: 1.05;
+  background: linear-gradient(135deg, var(--text-strong) 0%, var(--ink) 40%, var(--acc) 100%);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradientShift 6s ease infinite;
+}
+
+/* ── Lead ── */
+.lead {
+  margin: 0;
+  max-width: 58ch;
+  color: var(--muted);
+  font-size: clamp(1.02rem, 2.2vw, 1.18rem);
+  line-height: 1.65;
+}
+
+/* ── CTA row ── */
+.cta {
+  margin-top: 1.6rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.ctaPrimary {
+  position: relative;
+  animation: pulseRing 3s ease-in-out infinite;
+}
+
+.ctaArrow {
+  transition: transform 0.2s ease;
+}
+
+.ctaPrimary:hover .ctaArrow {
+  transform: translateX(3px);
+}
+
+/* ── Keyframes ── */
+@keyframes orbitSpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.5; transform: scale(1); }
+  50% { opacity: 0.85; transform: scale(1.05); }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+@keyframes pulseRing {
+  0% { box-shadow: 0 4px 20px rgba(60, 200, 170, 0.25); }
+  50% { box-shadow: 0 4px 20px rgba(60, 200, 170, 0.25), 0 0 0 6px rgba(60, 200, 170, 0.1); }
+  100% { box-shadow: 0 4px 20px rgba(60, 200, 170, 0.25); }
+}
+
+@media (max-width: 560px) {
+  .hero {
+    padding: clamp(5rem, 8vw, 6rem) 0 2.5rem;
+  }
+
+  .orbitRing {
+    width: 320px;
+    height: 320px;
+    top: -120px;
+    right: -120px;
+  }
+}

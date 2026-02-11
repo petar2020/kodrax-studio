@@ -1,0 +1,53 @@
+.beforeAfterGrid {
+  margin-top: 1rem;
+  display: grid;
+  gap: 20px;
+}
+
+.beforeAfterItem {
+  display: grid;
+  gap: 20px;
+  border: 1px solid var(--line);
+  border-radius: var(--rad);
+  background: var(--card);
+  padding: 0.9rem;
+}
+
+.imageWrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(125, 211, 252, 0.25);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.35);
+}
+
+.image {
+  object-fit: cover;
+}
+
+.label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  width: fit-content;
+  border: 1px solid var(--line);
+  background: rgba(11, 16, 24, 0.85);
+  border-radius: 999px;
+  color: var(--text-strong);
+  font-size: 0.86rem;
+  font-weight: 700;
+  padding: 0.26rem 0.65rem;
+}
+
+.beforeAfterItem p {
+  margin: 0;
+  color: var(--muted);
+}
+
+@media (min-width: 900px) {
+  .beforeAfterGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
